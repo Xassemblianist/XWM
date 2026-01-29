@@ -1,0 +1,45 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 2,
+ start_date = '2026-01-29_00:00:00','2026-01-29_00:00:00',
+ end_date   = '2026-02-12_00:00:00','2026-02-12_00:00:00',
+ interval_seconds = 21600,
+ io_form_geogrid = 2,
+/
+
+&geogrid
+ parent_id         =   1,   1,
+ parent_grid_ratio =   1,   5,
+ !
+ !
+ !
+ !
+ i_parent_start    =   1,  31,
+ j_parent_start    =   1,  31,
+ !
+ ! 
+ ! 
+ e_we              =  91, 151,
+ e_sn              =  91, 151,
+ !
+ dx = 4500,
+ dy = 4500,
+ !
+ map_proj = 'lambert',
+ ref_lat   =  36.89,
+ ref_lon   =  30.71,
+ truelat1  =  30.0,
+ truelat2  =  60.0,
+ stand_lon =  30.71,
+ geog_data_path = '/home/xassemblianist/WRF_System/WPS_GEOG/WPS_GEOG',
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE',
+ io_form_metgrid = 2,
+/
